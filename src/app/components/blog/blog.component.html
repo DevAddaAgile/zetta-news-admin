@@ -1,0 +1,33 @@
+<!-- <app-page-wrapper> -->
+  <div class="title-header option-title">
+    <div class="d-flex align-items-center">
+      <h5>{{ 'all_blogs' | translate }}</h5>
+    </div>
+    <div class="right-options">
+      <ul>
+        <li>
+          <a routerLink="/blog/create" class="btn btn-solid">{{ 'create' | translate }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card card-table">
+        <div class="card-body">
+          <div class="title-header option-title">
+            <h5>{{ 'all_blogs' | translate }}</h5>
+          </div>
+          <div class="table-responsive">
+            <app-table 
+              [tableConfig]="tableConfig" 
+              (tableChanged)="onTableChange($event)"
+              (action)="onActionClicked($event)">
+            </app-table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- </app-page-wrapper> -->
